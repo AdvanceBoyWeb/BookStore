@@ -33,7 +33,9 @@ try {
 //   .then(() => console.log("Connected to MongoDB"))
 //   .catch(err => console.error("Could not connect to MongoDB", err));
 
-
+app.get("/", (req, res) => {
+    res.send("Bookstore backend is running!");
+});
 // defining routes
 app.use("/book", bookRoute);
 app.use("/user", userRoute);
