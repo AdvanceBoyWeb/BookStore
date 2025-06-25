@@ -19,21 +19,17 @@ const PORT = process.env.PORT || 4000;
 const URI = process.env.MongoDBURI;
 
 // connect to mongoDB
-try {
-    mongoose.connect(URI, {
-        // useNewUrlParser: true,
-        // useUnifiedTopology: true,
-    });
+mongoose.connect(URI, {
+    // useNewUrlParser: true,
+    // useUnifiedTopology: true,
+})
+.then(() => {
     console.log("Connected to mongoDB");
-} catch (error) {
-    console.log("Error: ", error);
-}
+})
+.catch((error) => {
+    console.error("MongoDB connection error:", error);
+});
 
-
-
-// mongoose.connect('mongodb://127.0.0.1:27017/bookstore')
-//   .then(() => console.log("Connected to MongoDB"))
-//   .catch(err => console.error("Could not connect to MongoDB", err));
 
 app.get("/", (req, res) => {
     res.send("Bookstore backend is running!");
@@ -42,9 +38,6 @@ app.get("/", (req, res) => {
 app.use("/book", bookRoute);
 app.use("/user", userRoute);
 
-// app.listen(PORT, () => {
-//     console.log(`Server is listening on port ${PORT}`);
-// });
 
 if (!process.env.VERCEL) {
     app.listen(PORT, () => {
