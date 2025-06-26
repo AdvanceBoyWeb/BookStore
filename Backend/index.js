@@ -34,6 +34,7 @@ mongoose.connect(URI, {
 app.get("/", (req, res) => {
     res.send("Bookstore backend is running!");
 });
+
 // defining routes
 app.use("/book", bookRoute);
 app.use("/user", userRoute);
