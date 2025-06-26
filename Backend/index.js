@@ -8,7 +8,7 @@ import userRoute from "./route/user.route.js";
 
 const app = express();
 app.use(cors({
-  origin:"https://book-store-6q7j.vercel.app"
+  origin:"https://book-store-6q7j.vercel.app",
   credentials: true
 }));
 app.use(express.json());
