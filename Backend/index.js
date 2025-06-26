@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
 app.use("/book", bookRoute);
 app.use("/user", userRoute);
 
-
+res.redirect(process.env.FRONTEND_URL);
 if (!process.env.VERCEL) {
     app.listen(PORT, () => {
         console.log(`Server is listening on port ${PORT}`);
