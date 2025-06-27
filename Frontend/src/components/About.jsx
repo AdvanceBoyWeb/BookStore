@@ -6,13 +6,13 @@ const About = () => {
   return (
     <>
     <Navbar/>
-    <div className="py-16 px-6 md:px-20" style={{ backgroundColor: '#1D232A', color: 'white' }}>
+    <div className="max-w-4xl mx-auto p-6 mt-10">
       <div className="max-w-5xl mx-auto">
         {/* About Section */}
         <h2 className="text-4xl font-bold text-center text-blue-400 mb-8">About Us</h2>
 
-        <p className="text-gray-300 text-lg leading-relaxed mb-10 text-center">
-          Welcome to <span className="font-semibold text-white">BookStore</span> — your one-stop destination for all kinds of books.
+        <p className="text-black-300 text-lg leading-relaxed mb-10 text-center">
+          Welcome to <span className="font-semibold ">BookStore</span> — your one-stop destination for all kinds of books.
           Whether you are a student, a passionate reader, or someone exploring new knowledge, we have something for everyone!
         </p>
 
