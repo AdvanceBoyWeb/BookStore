@@ -49,7 +49,12 @@ function Footer() {
           </div>
         </nav>
         <aside>
-          <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+          <p className="text-gray-700 dark:text-gray-300">
+        &copy; {new Date().getFullYear()} Armani Book Store. All rights reserved.
+      </p>
+      <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
+        Designed with ❤️ by AdvanceBoyWeb
+      </p>
         </aside>
       </footer>
     </div>
