@@ -23,7 +23,7 @@ function Signup() {
       password: data.password,
     };
     await axios
-      .post(`${import.meta.env.VITE_API_URL}/user/login`, userInfo)
+      .post(`${import.meta.env.VITE_API_URL}/user/signup`, userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
